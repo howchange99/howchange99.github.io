@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #f2f2f2;
+}
+.info-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  z-index: 10;
+  color: #333;
+}
+.info-panel h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 20px;
+  color: #007bff;
+}
+.info-panel p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.btn-group {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+button {
+  padding: 10px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.fancy-btn, button.fancy-btn {
+  position: relative;
+  padding: 13px 38px;
+  background: linear-gradient(90deg,#2196f3,#1de9b6);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.18em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 24px rgba(40,180,240,0.20), 0 1.5px 4px rgba(60,80,110,0.06);
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  transition: transform 0.15s cubic-bezier(.33,1.37,.64,1), box-shadow 0.22s cubic-bezier(.45,2.1,.6,1);
+}
+.fancy-btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, transparent 80%);
+  transform: translate(-50%,-50%) scale(0);
+  transition: transform 0.33s cubic-bezier(.22,1.5,.56,1);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+.fancy-btn:hover::before {
+  transform: translate(-50%,-50%) scale(1);
+}
+.fancy-btn:hover, button.fancy-btn:hover {
+  background: linear-gradient(90deg,#00c6ff,#0072ff 90%);
+  transform: scale(1.06);
+  box-shadow: 0 12px 36px rgba(0,140,255,0.18), 0 2.5px 10px rgba(32,120,200,0.10);
+}
+.fancy-btn:active {
+  background: linear-gradient(90deg,#009fff,#ec2f4b 80%);
+  transform: scale(0.97);
+  box-shadow: 0 4px 8px rgba(50,80,130,0.10);
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(33,150,243,0.22), 0 6px 24px rgba(40,180,240,0.20);}
+  70% { box-shadow: 0 0 0 18px rgba(33,150,243,0.01), 0 6px 24px rgba(40,180,240,0.16);}
+  100% { box-shadow: 0 0 0 0 rgba(33,150,243,0.15), 0 6px 24px rgba(40,180,240,0.18);}
+}
+.fancy-btn {
+  animation: pulseGlow 1.8s infinite;
+}
+.fancy-btn:active {
+  animation: none;
+}
+@media (max-width: 700px) {
+  .fancy-btn, button.fancy-btn {
+    font-size: 1.03em;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+}
+.red-btn {
+  background: linear-gradient(90deg, #ff7b7b 0%, #ff5252 80%, #ffbaba 100%) !important;
+}
+.red-btn:hover {
+  background: linear-gradient(90deg, #ff5e5e 0%, #ff2e2e 90%) !important;
+  transform: scale(1.07);
+  box-shadow: 0 15px 46px rgba(255, 90, 90, 0.25);
+}
+
+/* 🔵 藍色調按鈕 */
+.blue-btn {
+  background: linear-gradient(90deg, #36e0ff 0%, #0ecbff 80%, #80f6ff 100%) !important;
+}
+.blue-btn:hover {
+  background: linear-gradient(90deg, #0ecbff 0%, #00b0ef 80%, #7df8ff 100%) !important;
+  transform: scale(1.07);
+  box-shadow: 0 15px 46px rgba(0, 220, 255, 0.25);
+}

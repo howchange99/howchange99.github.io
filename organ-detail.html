@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>樹人資管AR人體器官介紹系統 - 心臟與肺部介紹</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #f4f8fb;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 12px 24px 8px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .header img {
+      height: 56px;
+      margin-right: 8px;
+    }
+    .header-title {
+      font-size: 2.1em;
+      color: #1976d2;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin: 0;
+    }
+    main {
+      max-width: 950px;
+      margin: 32px auto 32px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 30px rgba(60,115,187,0.07);
+      padding: 36px 28px;
+    }
+    h2 {
+      color: #2085c7;
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.6em;
+    }
+    .organ-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .organ-row.reverse {
+      flex-direction: row-reverse;
+    }
+    .organ-img {
+      flex: 1 1 260px;
+      max-width: 340px;
+      background: #f8fcff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(40,140,200,0.07);
+      padding: 10px;
+      text-align: center;
+    }
+    .organ-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .labels {
+      flex: 2 1 380px;
+      font-size: 1.13em;
+      line-height: 1.8;
+      padding: 8px 0;
+    }
+    .labels ul {
+      padding-left: 18px;
+      margin: 0 0 12px 0;
+    }
+    .label-title {
+      color: #1565c0;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .en-labels {
+      background: #eef7fa;
+      border-radius: 7px;
+      padding: 12px 18px 8px 18px;
+      margin-top: 12px;
+      font-size: 0.98em;
+    }
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-btn a {
+      display: inline-block;
+      background-color: #1976d2;
+      color: white;
+      padding: 11px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    .back-btn a:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 900px) {
+      main {padding: 22px 4vw;}
+      .organ-row { flex-direction: column; gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="images/logo.jpg" alt="SZMC 樹人 logo">
+    <span class="header-title">樹人資管AR人體器官介紹系統</span>
+  </div>
+  <main>
+    <h2>心臟構造與功能</h2>
+    <div class="organ-row">
+      <div class="organ-img">
+        <img src="images/心臟.png" alt="心臟構造圖">
+      </div>
+      <div class="labels">
+        <div class="label-title">主要部位與功能：</div>
+        <ul>
+          <li><b>主動脈</b>：輸送含氧血液至全身</li>
+          <li><b>上腔靜脈 / 下腔靜脈</b>：回收身體血液進入心臟</li>
+          <li><b>右心房</b>：接收回流血液</li>
+          <li><b>右心室</b>：將缺氧血液送往肺部</li>
+          <li><b>左心房</b>：接收肺部含氧血液</li>
+          <li><b>左心室</b>：輸送含氧血液到全身</li>
+          <li><b>心臟瓣膜（如三尖瓣、二尖瓣、主動脈瓣、肺動脈瓣）</b>：防止血液逆流</li>
+        </ul>
+        <div class="label-title">說明：</div>
+        <div>
+          心臟是血液循環的核心，藉由規律收縮與舒張，維持全身組織氧氣及養分供應。
+          不同腔室與瓣膜協作，確保血液單向流動。
+        </div>
+        <div class="en-labels">
+          <b>English labels:</b><br>
+          Superior vena cava, Right atrium, Right ventricle, Tricuspid valve, Inferior vena cava, Aorta,<br>
+          Pulmonary vein, Mitral valve, Left ventricle, Aortic valve
+        </div>
+      </div>
+    </div>
+    <h2>肺部構造與功能</h2>
+    <div class="organ-row reverse">
+      <div class="organ-img">
+        <img src="images/肺部.png" alt="肺部構造圖">
+      </div>
+      <div class="labels">
+        <div class="label-title">主要結構：</div>
+        <ul>
+          <li><b>氣管</b>（Trachea）：空氣進入肺部的管道</li>
+          <li><b>左右肺</b>（Left/Right lung）：氧氣吸收與二氧化碳排出</li>
+          <li><b>肺泡</b>（Alveoli）：進行氣體交換的微小氣囊</li>
+        </ul>
+        <div class="label-title">說明：</div>
+        <div>
+          肺部是呼吸系統的主要器官，當空氣進入氣管，經由分支進入左右肺，肺泡將氧氣帶入血液，二氧化碳隨呼氣排出。肺與心臟協同，確保細胞獲得氧氣、排除廢氣。
+        </div>
+        <div class="en-labels">
+          <b>English labels:</b><br>
+          Trachea, Right lung, Left lung, Apex, Alveoli, Heart, Oxygen, Carbon Dioxide
+        </div>
+      </div>
+    </div>
+    <div class="back-btn"><a href="index.html" class="fancy-btn">🏠 返回首頁</a>　<a href="AR.html" class="fancy-btn">🔄 返回 AR 展示</a><br><br>
+      <a href="index.html" class="fancy-btn">← 返回 AR 展示</a>
+    </div>
+  </main>
+</body>
+</html>

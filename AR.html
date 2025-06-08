@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>醫療 AR 展示 - 直接路徑切換</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body>
+    <div class="info-panel" style="top: 80px;"><a href="index.html" style="text-decoration:none;"><button class="fancy-btn" style="margin-bottom:8px;width:100%;">🏠 返回首頁</button></a><a href="organ-detail.html" style="text-decoration:none;"><button class="fancy-btn" style="margin-bottom:10px;width:100%;">🔎 器官介紹</button></a><br>
+      <h3 id="organTitle">心臟</h3>
+      <p id="organDesc">這是人體的心臟，是血液循環的核心器官。透過有節奏的跳動，心臟將氧氣豐富的血液輸送到全身，再將代謝後的血液送回肺部進行氣體交換，是維持生命的動力來源。</p>
+    </div>
+    <div class="btn-group">
+  <div class="btn-group-v animate-panel">
+  <!-- 🔴 器官切換區塊（紅色調） -->
+  <div class="btn-row" style="margin-bottom: 10px;">
+    <button class="fancy-btn red-btn slide-in" onclick="switchOrgan('heart')">❤️ 心臟</button>
+    <button class="fancy-btn red-btn slide-in" onclick="switchOrgan('lungs')">🫁 肺</button>
+  </div>
+
+  <!-- 🔵 播放控制區塊（藍色調） -->
+  <div class="btn-row">
+    <button class="fancy-btn blue-btn slide-in" onclick="playAudio()">▶ 播放</button>
+    <button class="fancy-btn blue-btn slide-in" onclick="pauseAudio()">⏸ 暫停</button>
+  </div>
+</div>
+</div>
+    </div>
+    <a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam;">
+      <a-marker type="pattern" url="marker/pattern-medical.patt" id="marker">
+        <a-entity id="organModel" gltf-model="assets/heart.glb" position="0 1 0" scale="2 2 2"
+          animation__spin="property: rotation; to: 0 360 0; loop: true; dur: 4000"
+          animation__pulse="property: scale; dir: alternate; dur: 1200; loop: true; to: 2.4 2.4 2.4">
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+    <script src="main.js"></script>
+  </body>
+</html>
